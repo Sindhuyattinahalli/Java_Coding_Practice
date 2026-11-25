@@ -7,6 +7,8 @@ public class VowelsandConsonentsCount
    //  Return both as [vowels, consonants]
    //  Input to the function:  ['a','p','p','l','e'] 
    // Return from the function:  [2, 3]
+   //TC: O(n)
+   //SC:O(1)
 
    static void getVowelsCountandConsonentCount(char[] ch)
    {

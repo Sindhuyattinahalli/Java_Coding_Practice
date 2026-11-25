@@ -4,7 +4,6 @@ public class StringsDay1
 {
 
     //1. Single Character (char) Questions
-    //level 1-- Questions
 
     //1)print char and its ASCII
     //Time and Space complexity  of   all 1. Single Character (char) Questions level 1-- Questions is
@@ -104,11 +103,63 @@ public class StringsDay1
         System.out.println(result);
     }
 
-    //10)s
+    //10)Check whether a character is a digit or alphabet.
+    static void isCharacterOrAlphabet()
+    {
+        // char ch =  'b';
+        char ch = 69;
+        if((ch >= 65 && ch <= 91 )|| (ch >= 97 && ch <= 122) )
+        {
+            System.out.println(ch + " is a character");
+        }
+
+        else if(ch >= 48 && ch <= 57)
+        {
+            System.out.println(ch + " is a digit");
+        }
+    }
+
+    //11)Print the next five characters of a given character.
+    static void printNextFiveChars()
+    {
+        //for char
+        char ch = 'A';
+        for(int i = 1; i <= 5; i++)
+        {
+            System.out.println((char)(ch+i));//o/p=>B,C,D,E,F
+        }
+        System.out.println();
 
 
+        //digit as a char
+        char num = '2';
+        for(int i = 1; i <= 5; i++)
+        {
+            System.out.println((char)(num+i));//o/p=>3,4,5,6,7
+        }
+    }
 
 
+    //12)Print the previous five characters of a given character.
+    static void printPreviousFiveChars()
+    {
+        char ch = 'Z';
+        for(int i = 1; i <= 5; i++)
+        {
+            System.out.println((char)(ch-i));
+        }
+    }
+
+
+    //13)Print the ASCII values of uppercase letters A–Z.
+    static void printASCIIOfUpperCaseLetters()
+    {
+        char ch = 'A';
+        for(int i = 0; i <= 26; i++)
+        {
+            System.out.println((int)(ch+i));
+        }
+    }
     public static void main(String[] args) 
     {
        printCharAndASCII(); 
@@ -120,6 +171,10 @@ public class StringsDay1
        getASCIIOfDigits();
        isUpperCase();
        isLowerCase();
+       isCharacterOrAlphabet();
+       printNextFiveChars();
+       printPreviousFiveChars();
+       printASCIIOfUpperCaseLetters();
         
     }
 
