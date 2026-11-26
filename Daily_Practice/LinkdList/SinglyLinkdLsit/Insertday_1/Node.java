@@ -1,4 +1,4 @@
-package Daily_Practice.LinkdList.SinglyLinkdLsit.Insertday_1;
+package SinglyLinkdLsit.Insertday_1;
 
 /**
  * Node

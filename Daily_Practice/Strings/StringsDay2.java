@@ -90,6 +90,63 @@ public class StringsDay2
     }
 
 
+    //6)Reverse a character array without creating another array.
+    //approach - Two-Pointers
+    //Tc:O(n)
+    //SC:O(1)
+
+    static void reverseCharArray()
+    {
+        // char ch[] = {'A', 'p', 'p', 'L','e'};
+        char ch [] = {'S', 'i', 'n', 'd', 'h', 'u'};
+        int left = 0;
+        int right = ch.length-1;
+
+        while(left <= right)
+        {
+            char temp = ch[left];
+            ch[left]  = ch[right];
+            ch[right] = temp;
+
+            left++;
+            right--;
+        }
+
+        //printning reversed array
+        System.out.print("reversed Array :");
+        for(int i = 0; i < ch.length; i++)
+        {
+            System.out.print(ch[i]);
+        }
+        System.out.println();
+
+        
+    }
+
+    //7) Find the frequency of a given character
+    //Array: ['a', 'b', 'a', 'c', 'a', 'd']
+    //Character: 'a'
+    //TC:
+    //SC:
+    static void getFrequency()
+    {
+        char ch[] = {'a', 'b', 'a', 'c', 'a', 'd'};
+        char key = 'a';
+        int count = 0;
+
+        for(int i = 0; i < ch.length; i++)
+        {
+            if(ch[i] == key)
+            {
+                count++;
+            }
+        }
+        System.out.println("Frequencies are : " + count);
+        
+
+    }
+
+
 
 
 
@@ -107,6 +164,8 @@ public class StringsDay2
         CountChars();
         PrintChars();
         CountUpperCaseLowerCase();
+        reverseCharArray();
+        getFrequency();
         
     }
     
