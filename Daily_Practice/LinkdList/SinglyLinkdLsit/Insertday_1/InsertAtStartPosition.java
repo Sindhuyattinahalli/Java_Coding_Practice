@@ -3,6 +3,7 @@ package SinglyLinkdLsit.Insertday_1;
 /**
  * InsertAtStartPosition
  */
+//Day-1
 public class InsertAtStartPosition 
 {
     private Node head;
@@ -42,22 +43,25 @@ void printAllNodes()
 {
     System.out.println();
     System.out.print("head  -> ");
-    if(this.head == null)
+    Node walker = this.head;
+    if(walker == null)
     {
         System.out.print("null");
     }
     else
     {
-    while(this.head != null)
+    while(walker != null)
     {
-      System.out.print(this.head.data + " -> ");
-      this.head = this.head.next;
+      System.out.print(walker.data + " -> ");
+      walker = walker.next;
     }
     System.out.print("null");
     System.out.println();
 
    }
 }
+
+//Day-2
 
 
 void insertAtEnd(int value)
@@ -134,5 +138,74 @@ void InsertAtPosition(int value, int position)
     }
 }
     return count;
+}
+
+
+//Day-3
+
+//Delete Operation
+//deleteAtStart
+void deleteAtStart()
+{
+    //if list is empty
+    if(this.head == null)
+    {
+        return;
+    }
+    
+
+    //if list has one or  more than one
+    this.head = this.head.next;
+    this.count--;
+}
+
+//deleteatEnd
+void deleteAtEnd()
+{
+    if(this.head == null)
+    {
+        System.out.println(" List is Empty");
+        return;
+    }
+
+    if(this.head.next == null)
+    {
+        this.head = null;
+    }
+
+    Node CurrentNode = this.head;
+    while(CurrentNode.next.next != null)
+    {
+        CurrentNode = CurrentNode.next;
+    }
+    CurrentNode.next = null;
+    this.count--;
+}
+
+//deleteAtPosition
+void deleteAtPosition(int position)
+
+{
+    if(this.head == null)
+    {
+        return;
+    }
+
+    if(this.head.next == null)
+    {
+        this.head = null;
+    }
+
+
+     Node currentNode = this.head;
+     count =1;
+
+     while(count < position-1)
+     {
+        currentNode = currentNode.next;
+     }
+     currentNode.next = currentNode.next.next;
+     this.count--;
+
 }
 }
